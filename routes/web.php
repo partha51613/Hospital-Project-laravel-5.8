@@ -16,16 +16,14 @@ Route::get('/', function () {
     return view('homepage');
 });
 
-Route::get('/book', function () {
-    return view('user.booking1')->name('user.booking1');
-});
 
 
 //User Routes
 Route::get('/register','UserController@register')->name('user.register');
 Route::get('/login','UserController@login')->name('user.login');
 Route::get('/store','UserController@storeRegistrationData')->name('user.store');
-
+Route::get('/book', 'UserController@book')->name('user.book');
+Route::get('/store','UserController@storeBookData')->name('book.store');
 
 //Admin Routes
 Route::get('/adminlogin','AdminController@login')->name('admin.login');

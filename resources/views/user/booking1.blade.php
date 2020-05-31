@@ -35,7 +35,42 @@
            		    	<input type="password" class="input">
             	   </div>
             	</div>
-            	
+				<div class="input-div one">
+           		   <div class="i">
+           		   		
+           		   </div>
+            	 
+				<div class="div">
+           		    	<h5>Mobile</h5>
+           		    	<input type="password" class="input">
+            	   </div>
+				   </div>
+
+				   <div class="input-div one">
+           		   <div class="i">
+           		   		
+           		   </div>
+            	 
+				<div class="div">
+           		    	<h5>Address</h5>
+           		    	<input type="password" class="input">
+            	   </div>
+				   </div>
+
+
+				   <div class="input-div one">
+           		   <div class="i">
+           		   		
+           		   </div>
+            	 
+				<div class="div">
+           		    	<select name="Department" id="Dept">
+						   <option value=""></option>
+           		    	<input type="password" class="input">
+            	   </div>
+				   </div>
+
+
             	<input type="submit" class="btn" value="Book">
             </form>
         </div>
