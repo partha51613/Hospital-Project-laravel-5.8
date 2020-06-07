@@ -3,57 +3,21 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
 use App\Book;
 
 
 class UserController extends Controller
 {
-    public function register()
-    {
-        return view('user.registration');
-    }
-    public function login()
-    {
-        return view('user.login');
-    }
 
     public function book()
     {
         return view('user.book');
     }
-    public function storeRegistrationData(Request $request)
+
+    public function storeBookData(Request $request)
     {
         //Validate
 
-        $request->validate([
-
-            'firstname' => 'required',
-            'lastname' => 'required',
-            'email' => 'required|email'
-
-        ]);
-
-        //name of the input field i html page must be same on request();
-        //$user->fieldname | fieldname must be as in DataBase
-        //Sending Data to Database
-        $user = new User();
-        $user->fname = request('firstname');
-        $user->lname = request('lastname');
-        $user->email = request('email');
-        $user->password = request('password');
-
-        //Model saves an instance of data | This model must be imported to this controller
-        $user->save();
-        // return redirect(route('user.register',"Success"));
-        return redirect(route('user.register'))->with('success', ['your message,here']);
-    }
-
-
-public function storeBookData(Request $request)
-    {
-        //Validate
-   
         $request->validate([
 
             'name' => 'required',
@@ -64,14 +28,14 @@ public function storeBookData(Request $request)
             'email' => 'required|email',
 
         ]);
-        
-        
+
+
        // name of the input field i html page must be same on request();
        //$user->fieldname | fieldname must be as in DataBase
        // Sending Data to Database
-       
+
         $book = new Book();
-        $book->name = request('name'); 
+        $book->name = request('name');
         $book->age = request('age');
         $book->address = request('address');
         $book->description = request('description');
@@ -80,7 +44,9 @@ public function storeBookData(Request $request)
 
         //Model saves an instance of data | This model must be imported to this controller
         $book->save();
+        return redirect(route('userbook'))->with('success','Appointment Booked Successfully.');
+
         // return redirect(route('user.register',"Success"));
-        return redirect(route('user.book'))->with('success', ['your message,here']);
+
     }
 }

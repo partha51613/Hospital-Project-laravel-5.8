@@ -34,7 +34,9 @@
                         <div class="map">
                             <h4 class="footer-title">Map</h4>
                             <!-- The element that will contain our Google Map. This is used in both the Javascript and CSS above. -->
-                            <div id="map"></div>
+                            <div id="map">
+                                
+                            </div>
                         </div>
                     </div>
                 </div>

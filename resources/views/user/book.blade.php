@@ -9,12 +9,13 @@
 </head>
 <body>
     <div class="container mx-auto" >
-        <form action="{{route('book.store')}}">
+        <form action="{{route('bookstore')}}">
             <div class="form-header">
                 <h3 class="pt-3 text-primary "><center>Book An Appointment</center></h3>
             </div>
             <div>
                     @include('includes.errormsg')
+                    @include('includes.success')
              </div>
             <div class="form-header">
                 <h3 class="pt-3 text-primary ">Personal Information</h3>
@@ -41,7 +42,7 @@
                 <label for="description">Description</label>
                 <input type="description"  name="description" class="form-control" id="description">
               </div>
- 
+
               <div class="form-header">
                 <h3 class="pt-3 text-primary ">Contact Info</h3>
                 </div>

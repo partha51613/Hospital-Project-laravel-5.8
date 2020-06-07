@@ -30,7 +30,7 @@
                         <!--Header Social Icon -->
                         <div class="social">
                             <ul>
-                                 <a href="#" class="btn btn-default btn-xs">SIGN-IN</a>
+
                             </ul>
                         </div>
 
@@ -58,7 +58,7 @@
                         <li><a href="#about" class="page-scroll">About</a></li>
                         <li><a href="#service" class="page-scroll">Service</a></li>
                         <li><a href="#contact" class="page-scroll">Contact</a></li>
-                        <li><a href="" class="page-scroll">Book an Appoinment</a></li>
+                        <li><a href="{{route('user.book')}}" class="page-scroll btn-info">Book an Appoinment</a></li>
                     </ul>
                 </div> <!-- /.navbar-collapse -->
             </div> <!--/.container -->

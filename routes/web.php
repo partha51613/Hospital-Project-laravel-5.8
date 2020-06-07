@@ -18,12 +18,19 @@ Route::get('/', function () {
 
 
 
-//User Routes
-Route::get('/register','UserController@register')->name('user.register');
-Route::get('/login','UserController@login')->name('user.login');
-Route::get('/store','UserController@storeRegistrationData')->name('user.store');
-Route::get('/book', 'UserController@book')->name('user.book');
-Route::get('/store','UserController@storeBookData')->name('book.store');
+/**********************************User Routes********************************** */
 
-//Admin Routes
-Route::get('/adminlogin','AdminController@login')->name('admin.login');
+//Book Appointment
+Route::get('/book', 'UserController@book')->name('userbook');
+Route::get('/store','UserController@storeBookData')->name('bookstore');
+
+
+/**********************************Admin Routes********************************** */
+
+Route::get('/admin','AdminController@login')->name('adminlogin');
+Route::get('/index','AdminController@index')->name('adminindex');
+Route::get('/viewbookings','AdminController@viewbookings')->name('adminviewbookings');
+Route::get('/booking/{id}/delete','AdminController@deletebookings')->name('admindeletebookings');
+Route::get('/departments','AdminController@departments')->name('adminviewdepartments');
+Route::get('/department/{id}/delete','AdminController@deletedepartments')->name('admindeletedepartments');
+Route::get('/adddepartment','AdminController@addDepartment')->name('adminaddDepartment');

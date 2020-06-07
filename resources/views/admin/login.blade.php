@@ -1,17 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Form Styling</title>
-    <link rel="stylesheet" href="./css/user/registration.css">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
-  </head>
+@extends('layouts2.app')
+<link rel="stylesheet" href="./public/css/user/registration.css">
+@section('content')
 
-  <body>
-
-    <div class="container">
+    <div class="container mx-auto">
         <div class="form-wrap">
             <h1>Admin Panel</h1>
 
@@ -27,8 +18,8 @@
             </div>
         </div>
 
-        <button type="submit" class="btn">Sign In</button>
+        <button type="submit" class="btn btn-primary">Sign In</button>
 
     </div>
-  </body>
-</html>
+
+@endsection
