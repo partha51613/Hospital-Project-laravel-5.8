@@ -29,14 +29,26 @@ Route::get('/store','UserController@storeBookData')->name('bookstore');
 
 Route::get('/adminlogin','AdminController@login')->name('adminlogin');
 Route::get('/index','AdminController@index')->name('adminindex');
+
+
+//Bookings
 Route::get('/viewbookings','AdminController@viewbookings')->name('adminviewbookings');
 Route::get('/booking/{id}/delete','AdminController@deletebookings')->name('admindeletebookings');
-Route::get('/departments','AdminController@departments')->name('adminviewdepartments');
-Route::get('/department/{id}/delete','AdminController@deletedepartments')->name('admindeletedepartments');
-Route::get('/adddepartment','AdminController@addDepartment')->name('adminaddDepartment');
 Route::get('/admin','AdminController@admindashboard')->name('adminviewbookings');
 Route::get('edit/{id}','AdminController@admineditbookings')->name('admineditbookings');
 Route::get('/update/booking/{id}','AdminController@updatebookingdata')->name('updatebookingdata');
+Route::post('/savedepartment','AdminController@savedepartments')->name('savedepartments');
+
+
+//Departments
+Route::get('/departments','AdminController@departments')->name('adminviewdepartments');
+Route::get('/department/{id}/delete','AdminController@deletedepartments')->name('admindeletedepartments');
+Route::get('/adddepartment','AdminController@addDepartment')->name('adminaddDepartment');
+Route::get('/department','AdminController@viewdepartments')->name('viewdepartments');
+
+
+
+
 
 //wait
 

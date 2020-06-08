@@ -13,6 +13,11 @@ admin
             <div class="card">
               <div class="card-header">
                 <h4 class="card-title">View Booking</h4>
+                @if(session('status'))
+                <div class="alert alert-success" role="alert">
+                  {{ session('status') }}
+                </div>
+                @endif
               </div>
               <div class="card-body">
                 <div class="table-responsive">
@@ -37,7 +42,7 @@ admin
                         <td>{{$user->phone}}</td>
                         <td>{{$user->email}}</td>
                         <td><a href="{{route('admineditbookings',['id'=>$user->id])}}" class="btn btn-success">EDIT</a></td>
-                        <td><a href ="#" class="btn btn-danger">DELETE</a></td>
+                        <td><a href ="" class="btn btn-danger">DELETE</a></td>
                     </tr>
                     @endforeach
                     </tbody>

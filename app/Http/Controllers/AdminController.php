@@ -66,6 +66,24 @@ class AdminController extends Controller
         $data = Book::find($id);
         $data->name = request('name');
         $data->save();
-        return redirect(route('adminviewbookings'));
+        return redirect(route('adminviewbookings'))->with('status','Data updated successfully');
     }
+
+
+public function viewdepartments()
+    {
+        $data = Department::all();
+        return view('admin.viewadmindepartment')->with('departmentdata',$data);
+    }
+
+   public function savedepartments(Request $request)
+   {
+    $store = new Department;  
+    
+    $store->DepartmentName = $request->input('DepartmentName');
+
+    $store->save();
+    //redirect de
+    return redirect(route('viewdepartments'));
+   } 
 }

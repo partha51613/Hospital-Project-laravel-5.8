@@ -38,16 +38,16 @@
       </div>
       <div class="sidebar-wrapper" id="sidebar-wrapper">
         <ul class="nav">
-          <li>
-            <a href="./dashboard.html">
+          <li class="{{ '/dashboard' == request()->path() ? 'active' : '' }} ">
+            <a href="/dashboard">
               <i class="now-ui-icons design_app"></i>
               <p>Dashboard</p>
             </a>
           </li>
-          <li>
-            <a href="./icons.html">
+          <li class="{{ '/department' == request()->path() ? 'active' : '' }} ">
+            <a href="/department">
               <i class="now-ui-icons education_atom"></i>
-              <p>Icons</p>
+              <p>View Department</p>
             </a>
           </li>
           <li>
@@ -68,8 +68,8 @@
               <p>User Profile</p>
             </a>
           </li>
-          <li class="active ">
-            <a href="./tables.html">
+          <li class="{{ 'admin' == request()->path() ? 'active' : '' }} ">
+            <a href="/admin">
               <i class="now-ui-icons design_bullet-list-67"></i>
               <p>View Bookings</p>
             </a>
