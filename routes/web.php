@@ -27,10 +27,11 @@ Route::get('/store','UserController@storeBookData')->name('bookstore');
 
 /**********************************Admin Routes********************************** */
 
-Route::get('/admin','AdminController@login')->name('adminlogin');
+Route::get('/adminlogin','AdminController@login')->name('adminlogin');
 Route::get('/index','AdminController@index')->name('adminindex');
 Route::get('/viewbookings','AdminController@viewbookings')->name('adminviewbookings');
 Route::get('/booking/{id}/delete','AdminController@deletebookings')->name('admindeletebookings');
 Route::get('/departments','AdminController@departments')->name('adminviewdepartments');
 Route::get('/department/{id}/delete','AdminController@deletedepartments')->name('admindeletedepartments');
 Route::get('/adddepartment','AdminController@addDepartment')->name('adminaddDepartment');
+Route::get('/admin','AdminController@admindashboard')->name('adminviewbookings');

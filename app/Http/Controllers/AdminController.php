@@ -23,6 +23,15 @@ class AdminController extends Controller
        // return $data;
         return view('admin.viewbookings')->with('info', $data);
     }
+
+    public function admindashboard()
+    {
+        $thisdata = Book::all();
+        //dd($data);
+       // return $data;
+        return view('admin.admindashboard')->with('info', $thisdata);
+    }
+
     public function deletebookings($id)
     {
         $posts = Book::find($id);

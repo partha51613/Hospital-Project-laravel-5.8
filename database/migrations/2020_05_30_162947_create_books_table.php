@@ -13,7 +13,7 @@ class CreateBooksTable extends Migration
      */
     public function up()
     {
-        Schema::create('books', function (Blueprint $table) {
+        Schema::create('booking', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('age');
@@ -33,6 +33,6 @@ class CreateBooksTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('books');
+        Schema::dropIfExists('booking');
     }
 }
