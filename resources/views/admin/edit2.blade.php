@@ -27,7 +27,7 @@ admin
                       <th>Email</th>
                     </thead>
                     <tbody>
-                    @foreach ($info as $user)
+                 
                       <tr>
                       <td>{{$user->id}}</td>
                         <td>{{$user->name}}</td>
@@ -39,7 +39,7 @@ admin
                         <td><a href="{{route('admineditbookings',['id'=>$user->id])}}" class="btn btn-success">EDIT</a></td>
                         <td><a href ="#" class="btn btn-danger">DELETE</a></td>
                     </tr>
-                    @endforeach
+                  
                     </tbody>
                   </table>
                 </div>

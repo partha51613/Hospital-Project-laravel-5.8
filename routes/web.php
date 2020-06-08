@@ -35,3 +35,13 @@ Route::get('/departments','AdminController@departments')->name('adminviewdepartm
 Route::get('/department/{id}/delete','AdminController@deletedepartments')->name('admindeletedepartments');
 Route::get('/adddepartment','AdminController@addDepartment')->name('adminaddDepartment');
 Route::get('/admin','AdminController@admindashboard')->name('adminviewbookings');
+Route::get('edit/{id}','AdminController@admineditbookings')->name('admineditbookings');
+Route::get('/update/booking/{id}','AdminController@updatebookingdata')->name('updatebookingdata');
+
+//wait
+
+//Temp Route
+
+// Route::get('/editpage',function(){
+//     return view('admin.edit');
+// });

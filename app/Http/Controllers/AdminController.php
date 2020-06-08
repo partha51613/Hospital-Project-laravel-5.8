@@ -53,4 +53,19 @@ class AdminController extends Controller
     {
         return view('admin.addDepartment');
     }
+    public function admineditbookings($id)
+    {
+        $data = Book::find($id);
+        //return $data;
+        return view('admin.edit')->with('user',$data);
+    }
+    public function updatebookingdata(Request $request, $id)
+    {
+
+       
+        $data = Book::find($id);
+        $data->name = request('name');
+        $data->save();
+        return redirect(route('adminviewbookings'));
+    }
 }

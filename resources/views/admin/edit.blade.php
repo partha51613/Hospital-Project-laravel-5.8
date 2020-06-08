@@ -18,11 +18,12 @@ admin
 <div class="card-body">
 <div class="row">
 <div class="col-md-6">
-<form action="">
+
+<form action="{{route('updatebookingdata',['id'=>$user->id])}}">
 
 <div class="form-group">
     <label>Patient Name</label>
-    <input type="text" name="name"  class="form-control">
+<input type="text" name="name" class="form-control" placeholder="{{$user->name}}">
     </div>
     <div class="form-group">
     <label>Age</label>
@@ -49,6 +50,10 @@ admin
     <label>Email</label>
     <input type="text" name="email"  class="form-control">
     </div>
+    <div class="form-group">
+    
+     <button class="btn-primary">Button</button>
+      </div>
   </div>
   
 
