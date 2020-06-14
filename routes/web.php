@@ -51,5 +51,5 @@ Route::get('/department/{id}/edit/store','AdminController@storenewdepartment')->
 Route::get('/{id}/approve','Admincontroller@approveAppointment')->name('approveAppointment');
 Route::get('/{id}/cancel','Admincontroller@cancelAppointment')->name('cancelAppointment');
 
-Route::get('/sendmail', 'SendEmailController@index');
+Route::get('/sendmail', 'SendEmailController@index')->name('mail');
 Route::post('/sendemail/send','SendEmailController@send');

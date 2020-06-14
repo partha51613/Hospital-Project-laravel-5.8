@@ -31,6 +31,6 @@ class SendEmailController extends Controller
 
         );
         Mail::to($mail)->send(new SendMail($data));
-        return back()->with('success','Thanks For Contacting');
+        return back()->with('success','Email Sent Successfully to '.$mail);
 }
     }

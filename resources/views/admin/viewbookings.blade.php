@@ -15,6 +15,7 @@
 </div>
 <div class="container">
         <a href="{{route('adminindex')}}" class="btn btn-danger float-left mb-2 btn-sm"><- Back to Index</a>
+        <a href="{{route('mail')}}" class="pl-3 pr-3 btn btn-primary float-right mb-2 btn-sm">Send Mail</a>
         <div class="table-responsive">
             <table class="table table-dark table-striped table-bordered table-sm table-hover">
                 <thead class="thead-dark" align="center">

@@ -3,7 +3,7 @@
 
     <div class="mt-10">
 
-        <center><h1 class="mt-2">Department List</h1></center>
+        <center><h1 class="mt-2 text-primary">Department List</h1></center>
     </div>
     <div class="container">
         @include('includes.success')
