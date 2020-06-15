@@ -22,6 +22,7 @@ class CreateBooksTable extends Migration
             $table->string('phone');
             $table->string('email');
             $table->tinyInteger('approved')->default(0);
+            $table->tinyInteger('message_sent')->default(0);
             $table->timestamps();
         });
     }

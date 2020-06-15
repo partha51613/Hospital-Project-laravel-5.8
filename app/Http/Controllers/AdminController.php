@@ -49,7 +49,7 @@ class AdminController extends Controller
             'age' => 'required',
             'address' => 'required',
             'description' => 'required',
-            'phone' => 'required',
+            'phone' => ['required','max:12'],
             'email' => 'required|email',
 
         ]);
