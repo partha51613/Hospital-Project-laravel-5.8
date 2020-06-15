@@ -12,7 +12,7 @@
 
 <br><br>
     <div class="container">
-        <a href="{{route('adminindex')}}" class="btn btn-danger float-left mb-2 btn-sm"><- Back to Index</a>
+                <a href="{{route('adminviewbookings')}}" class="pl-3 pr-3 btn btn-primary float-left mb-2 btn-sm"><- Back to Bookings</a>
         <form action="{{url('sendemail/send')}}" method="post"><br><br>
 
             @csrf
@@ -22,12 +22,18 @@
             </div>
             <div class="form-group">
                 <label for="name"><b>Enter your Email</b></label>
-                <input type="email" name="email" class="form-control">
+                <input type="email" name="email" class="form-control" value={{$mail}}>
             </div>
             <div class="form-group">
                 <label for="message"><b>Enter your Message</b></label>
                 <textarea name="message" id="message" class="form-control" cols="30" rows="4"></textarea>
             </div>
+
+            <div class="form-group">
+
+                <input type="hidden" name="id" class="form-control" value={{$id}}>
+            </div>
+
             <div class="form-group">
                 <input type="submit" name="submit" value="Send" class="btn btn-block btn-primary">
             </div>

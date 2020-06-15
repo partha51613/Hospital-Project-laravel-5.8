@@ -53,3 +53,4 @@ Route::get('/{id}/cancel','Admincontroller@cancelAppointment')->name('cancelAppo
 
 Route::get('/sendmail', 'SendEmailController@index')->name('mail');
 Route::post('/sendemail/send','SendEmailController@send');
+Route::get('/{mailid}/send','SendEmailController@mailto')->name('mailto');

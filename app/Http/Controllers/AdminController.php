@@ -120,7 +120,7 @@ class AdminController extends Controller
     public function approveAppointment($id)
     {
         $appt = Book::find($id);
-        $temp = $appt->name;
+      //  $temp = $appt->name;
         $appt->approved = 1;
 
         $appt->save();

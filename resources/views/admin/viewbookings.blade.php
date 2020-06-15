@@ -15,7 +15,7 @@
 </div>
 <div class="container">
         <a href="{{route('adminindex')}}" class="btn btn-danger float-left mb-2 btn-sm"><- Back to Index</a>
-        <a href="{{route('mail')}}" class="pl-3 pr-3 btn btn-primary float-right mb-2 btn-sm">Send Mail</a>
+        
         <div class="table-responsive">
             <table class="table table-dark table-striped table-bordered table-sm table-hover">
                 <thead class="thead-dark" align="center">
@@ -29,7 +29,7 @@
                         <th scope="col">Email</th>
                         <th scope="col" colspan="2">Appointment Status</th>
                         <th scope="col" colspan="2">Options</th>
-
+                        <th scope="col" colspan="2">Mail Status</th>
                     </tr>
                 </thead>
                 @php
@@ -61,6 +61,11 @@
                     <td>
                         <a href="{{route('admindeletebookings',['id'=>$user->id]) }}" onclick="return confirm('Are you sure you want to delete ?')" class="btn btn-danger btn-sm">Delete</a>
                     </td>
+                    @if($user->message_sent=='0')
+                        <td><a href="{{route('mailto',['id'=>$user->id])}}" class="btn btn-primary btn-sm">Send Mail</a></td>
+                    @else
+                        <td><a href="#" class="btn btn-secondary btn-sm disabled">Mail Sent</a></td>
+                    @endif
                     @php
                         $id++
                     @endphp

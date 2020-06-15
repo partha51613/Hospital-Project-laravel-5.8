@@ -13,7 +13,6 @@
                     <tbody class="text-left">
                         <tr><td><li><a href="{{route('adminviewbookings')}}">View Bookings</a></li></tr></td>
                         <tr><td><li> <a href="{{route('adminviewdepartments')}}">View Departments</a></li></tr></td>
-                        <tr><td><li> <a href="{{route('mail')}}">Send Mail</a></li></tr></td>
                     </tbody>
 
                 </table>
