@@ -26,7 +26,7 @@
                             {{-- <th scope="col">ID</th> --}}
                             <th scope="col">Sr.No</th>
                             <th scope="col">Department Name</th>
-                            <th scope="col">Options</th>
+                            <th scope="col" colspan="2">Options</th>
                         </tr>
                     </thead>
                     @php
@@ -41,9 +41,8 @@
                         @php
                         $id++
                         @endphp
-                    <td>
-                        <a href="{{route('admineditDepartments',['id'=>$department->id])}}" class="btn btn-primary btn-sm text-nowrap">Edit</a>
-                        <a href="{{ route('admindeletedepartments',['id'=> $department->id]) }}" onclick="return confirm('Are you sure you want to delete ?')" class="btn btn-danger btn-sm ">Delete</a></td>
+                    <td><a href="{{route('admineditDepartments',['id'=>$department->id])}}" class="pl-3 pr-3 btn btn-primary btn-sm text-nowrap">Edit</a></td>
+                    <td><a href="{{ route('admindeletedepartments',['id'=> $department->id]) }}" onclick="return confirm('Are you sure you want to delete ?')" class="btn btn-danger btn-sm ">Delete</a></td>
                     </tr>
                     @endforeach
 
