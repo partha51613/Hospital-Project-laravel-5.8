@@ -15,13 +15,13 @@
 </div>
 <div class="container">
         <a href="{{route('adminindex')}}" class="btn btn-danger float-left mb-2 btn-sm"><- Back to Index</a>
-        
+
         <div class="table-responsive">
             <table class="table table-dark table-striped table-bordered table-sm table-hover">
                 <thead class="thead-dark" align="center">
                     <tr>
                         <th scope="col">S.No</th>
-                        <th scope="col">Patient Name</th>
+                        <th scope="col">Patient</th>
                         <th scope="col">Age</th>
                         <th scope="col">Address</th>
                         <th scope="col">Description</th>
@@ -29,7 +29,7 @@
                         <th scope="col">Email</th>
                         <th scope="col" colspan="2">Appointment Status</th>
                         <th scope="col" colspan="2">Options</th>
-                        <th scope="col" colspan="2">Mail Status</th>
+                        <th scope="col" colspan="2">Mail</th>
                     </tr>
                 </thead>
                 @php
@@ -46,25 +46,25 @@
                     <td>{{$user->email}}</td>
                     @if($user->approved=='0')
 
-                        <td><a href="{{route('approveAppointment',['id'=>$user->id])}}" class="btn btn-primary btn-sm">Approve</a></td>
-                        <td><a href="#" class="pl-3 pr-3 btn btn-secondary btn-sm disabled" >Cancel</a></td>
+                        <td><a href="{{route('approveAppointment',['id'=>$user->id])}}" class="mt-2 btn btn-primary btn-sm">Approve</a></td>
+                        <td><a href="#" class="mt-2 pl-3 pr-3 btn btn-secondary btn-sm disabled" >Cancel</a></td>
 
                     @else
 
-                        <td><a href="#" class="btn btn-secondary btn-sm disabled">Approved</a></td>
-                        <td><a href="{{route('cancelAppointment',['id'=>$user->id])}}" class="pl-3 pr-3 btn btn-warning btn-sm">Cancel</a></td>
+                        <td><img src="./images/icon/tick.png" alt="" height="20px" width="20px" class="mt-2"></td>
+                        <td><a href="{{route('cancelAppointment',['id'=>$user->id])}}" class="mt-2 pl-3 pr-3 btn btn-warning btn-sm">Cancel</a></td>
 
                     @endif
                     <td>
-                        <a href="{{route('adminEditBooking',['id'=>$user->id]) }}" class="pl-3 pr-3 btn btn-success btn-sm">Edit</a>
+                        <a href="{{route('adminEditBooking',['id'=>$user->id]) }}" class="mt-2 pl-3 pr-3 btn btn-success btn-sm">Edit</a>
                     </td>
                     <td>
-                        <a href="{{route('admindeletebookings',['id'=>$user->id]) }}" onclick="return confirm('Are you sure you want to delete ?')" class="btn btn-danger btn-sm">Delete</a>
+                        <a href="{{route('admindeletebookings',['id'=>$user->id]) }}" onclick="return confirm('Are you sure you want to delete ?')" class="mt-2 btn btn-danger btn-sm">Delete</a>
                     </td>
                     @if($user->message_sent=='0')
-                        <td><a href="{{route('mailto',['id'=>$user->id])}}" class="btn btn-primary btn-sm">Send Mail</a></td>
+                        <td><a href="{{route('mailto',['id'=>$user->id])}}" class="mt-2 btn btn-primary btn-sm">Send</a></td>
                     @else
-                        <td><a href="#" class="btn btn-secondary btn-sm disabled">Mail Sent</a></td>
+                        <td><img src="./images/icon/tick.png" alt="" height="20px" width="20px" class="mt-2"></td>
                     @endif
                     @php
                         $id++

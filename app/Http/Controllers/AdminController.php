@@ -13,6 +13,7 @@ class AdminController extends Controller
         return view('admin.index');
     }
 
+
     public function login()
     {
         return view('admin.login');
@@ -34,12 +35,14 @@ class AdminController extends Controller
         return redirect(route('adminviewbookings'))->with('deleted','Booking Deleted Successfully');
     }
 
+
     public function editbookings($id)
     {
         $data = Book::find($id);
         return view('admin.editBooking')->with('data',$data);
 
     }
+
 
     public function storeNewBooking(Request $request, $id)
     {
@@ -117,6 +120,7 @@ class AdminController extends Controller
 
     }
 
+
     public function approveAppointment($id)
     {
         $appt = Book::find($id);
@@ -126,6 +130,8 @@ class AdminController extends Controller
         $appt->save();
         return redirect(route('adminviewbookings'))->with('success','Appointment Approved');
     }
+
+
     public function cancelAppointment($id)
     {
         $appt = Book::find($id);
