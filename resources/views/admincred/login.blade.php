@@ -5,6 +5,8 @@
     <div class="container mt-3 mb-3">
         <h3 class="text-danger font-weight-bold text-justify text-center">Admin Login</h3>
     </div>
+                @include('includes.errormsg')
+                @include('includes.success')
     <div class="mt-5 container" style="width: 300px">
         <form method="POST" action="/admin/login/check">
             @csrf

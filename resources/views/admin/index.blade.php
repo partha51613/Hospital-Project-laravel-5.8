@@ -4,13 +4,12 @@
 
         <div class="mt-2 header text-primary">
             <center><h1>Admin Index</h1></center>
-
+        <div class="container">
+            @include('includes.errormsg')
+            @include('includes.success')
+        </div>
 
         <div class=" mt-5 container text-center " style="width: 450px" >
-            <div>
-                @include('includes.errormsg')
-                @include('includes.success')
-            </div>
                 <table class="table table-bordered table-hover">
                     <tbody class="text-left">
                         <tr ><td><li><a href="{{route('adminviewbookings')}}">View Bookings</a></li></tr></td>
