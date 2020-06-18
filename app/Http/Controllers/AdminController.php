@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 use App\Book;
 use App\Department;
+use Hash;
+use Auth;
+
 
 use Illuminate\Http\Request;
 
@@ -16,7 +19,7 @@ class AdminController extends Controller
 
     public function login()
     {
-        return view('admin.login');
+        return view('admincred.login');
     }
 
 
@@ -138,6 +141,27 @@ class AdminController extends Controller
         $appt->approved = 0;
         $appt->save();
         return redirect(route('adminviewbookings'))->with('deleted','Appointment Cancelled');
+    }
+
+    public function check(Request $request)
+    {
+            $input = array(
+                'email' => request('email'),
+                'password' => request('password')
+
+            );
+
+            $remember = "test";
+
+            if (Auth::attempt($input, $remember))
+            {
+                return redirect(route('adminindex'))->with('success','Login Successful');
+            }
+            else
+            {
+
+            }
+
     }
 
 }

@@ -7,16 +7,16 @@
 
 
         <div class=" mt-5 container text-center " style="width: 450px" >
-
-                <table class="table align-items-left table-bordered table-hover">
-
+            <div>
+                @include('includes.errormsg')
+                @include('includes.success')
+            </div>
+                <table class="table table-bordered table-hover">
                     <tbody class="text-left">
-                        <tr><td><li><a href="{{route('adminviewbookings')}}">View Bookings</a></li></tr></td>
+                        <tr ><td><li><a href="{{route('adminviewbookings')}}">View Bookings</a></li></tr></td>
                         <tr><td><li> <a href="{{route('adminviewdepartments')}}">View Departments</a></li></tr></td>
                     </tbody>
-
                 </table>
-
         </div>
     </div>
 @endsection

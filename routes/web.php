@@ -1,4 +1,6 @@
 <?php
+use Illuminate\Support\Facades\Hash;
+use App\Book;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,7 +29,7 @@ Route::get('/store','UserController@storeBookData')->name('bookstore');
 
 /**********************************Admin Routes********************************** */
 
-Route::get('/admin','AdminController@login')->name('adminlogin');
+Route::get('/admin/login','AdminController@login')->name('adminlogin');
 Route::get('/index','AdminController@index')->name('adminindex');
 
 //Bookings
@@ -55,19 +57,7 @@ Route::get('/sendmail', 'SendEmailController@index')->name('mail');
 Route::post('/sendemail/send','SendEmailController@send');
 Route::get('/{mailid}/send','SendEmailController@mailto')->name('mailto');
 
-
-
 //LOGIN FORM
-
-Route::get('/adminregister',function(){
-
-    return view('admincred.register');
-
-});
-
-Route::post('/adminregister/store',function(Request $request){
-
-
-});
+Route::post('/admin/login/check', 'AdminController@check');
 
 
