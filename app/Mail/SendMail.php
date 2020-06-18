@@ -28,7 +28,9 @@ class SendMail extends Mailable
      */
     public function build()
     {
-        return $this->from('partha51613@gmail.com')->subject('Regarding Appointment')->view('admin.emailmsg')->with('data',$this->data);
+        $value = \Config::get('mail.username');
+
+        return $this->from($value)->subject('Regarding Appointment')->view('admin.emailmsg')->with('data',$this->data);
        // return $this->view('view.name');
     }
 }

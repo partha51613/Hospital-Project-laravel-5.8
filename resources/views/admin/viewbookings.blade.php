@@ -1,19 +1,20 @@
 @extends('layouts2.app')
 @section('content')
 
-<div class="mt-10">
-    <center><h1 class="mt-2 text-danger">Booking Details:</h1></center>
+<div class="mt-3">
+    <h1 class="text-danger font-weight-bold text-justify text-center">Booking Details:</h1>
 </div>
 <div class="container">
     @include('includes.errormsg')
     @include('includes.success')
 </div>
 
-<br><br>
 <div>
 
 </div>
 <div class="container">
+    <p><h4><b>Note:</b></h4></p>
+    <p><b>* Appointment cannot be cancelled once mail is sent.</b></p>
         <a href="{{route('adminindex')}}" class="btn btn-danger float-left mb-2 btn-sm"><- Back to Index</a>
 
         <div class="table-responsive">
@@ -48,6 +49,12 @@
 
                         <td><a href="{{route('approveAppointment',['id'=>$user->id])}}" class="mt-2 btn btn-primary btn-sm">Approve</a></td>
                         <td><a href="#" class="mt-2 pl-3 pr-3 btn btn-secondary btn-sm disabled" >Cancel</a></td>
+
+                    @elseif($user->approved=='1' && $user->message_sent=='1')
+
+                        <td><img src="./images/icon/tick.png" alt="" height="20px" width="20px" class="mt-2"></td>
+                        <td></td>
+
 
                     @else
 

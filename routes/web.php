@@ -54,3 +54,20 @@ Route::get('/{id}/cancel','Admincontroller@cancelAppointment')->name('cancelAppo
 Route::get('/sendmail', 'SendEmailController@index')->name('mail');
 Route::post('/sendemail/send','SendEmailController@send');
 Route::get('/{mailid}/send','SendEmailController@mailto')->name('mailto');
+
+
+
+//LOGIN FORM
+
+Route::get('/adminregister',function(){
+
+    return view('admincred.register');
+
+});
+
+Route::post('/adminregister/store',function(Request $request){
+
+
+});
+
+
