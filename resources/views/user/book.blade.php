@@ -35,7 +35,7 @@
             </div>
 
             <div class="form-group">
-                <input type="number"  name="phone" class="form-control" id="phone" placeholder="Phone">
+                <input type="number" name="phone" class="form-control" id="phone"   placeholder="Phone">
               </div>
 
             <div class="form-group">
