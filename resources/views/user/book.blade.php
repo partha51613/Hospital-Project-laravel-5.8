@@ -24,8 +24,15 @@
               </div>
 
             <div class="form-group">
-                <input type="text"  name="description" class="form-control" id="description" placeholder="Health problem">
-              </div>
+
+                <label for="cars">Department : </label>
+                    <select name="department" id="department" selected="----------">
+                        <option value="----------">----------</option>
+                        @foreach ($data as $dept)
+                       <option value="{{$dept->DepartmentName}}">{{$dept->DepartmentName}}</option>
+                       @endforeach
+                    </select>
+            </div>
 
             <div class="form-group">
                 <input type="number"  name="phone" class="form-control" id="phone" placeholder="Phone">

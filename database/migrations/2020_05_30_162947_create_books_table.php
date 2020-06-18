@@ -18,7 +18,7 @@ class CreateBooksTable extends Migration
             $table->string('name');
             $table->string('age');
             $table->string('address');
-            $table->string('description');
+            $table->string('department');
             $table->string('phone');
             $table->string('email');
             $table->tinyInteger('approved')->default(0);

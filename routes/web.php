@@ -31,6 +31,8 @@ Route::get('/store','UserController@storeBookData')->name('bookstore');
 
 Route::get('/admin/login','AdminController@login')->name('adminlogin');
 Route::get('/index','AdminController@index')->name('adminindex');
+Route::get('/admin',function(){return redirect('/admin/login/');});
+
 
 //Bookings
 //Admin Bookings

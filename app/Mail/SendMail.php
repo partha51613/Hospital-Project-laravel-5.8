@@ -28,7 +28,7 @@ class SendMail extends Mailable
      */
     public function build()
     {
-        $value = \Config::get('mail.username');
+        $value = \Config::get('mail.username'); //Set email in mail server of env
 
         return $this->from($value)->subject('Regarding Appointment')->view('admin.emailmsg')->with('data',$this->data);
        // return $this->view('view.name');

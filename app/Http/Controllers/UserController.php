@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Book;
+use App\Department;
 
 
 class UserController extends Controller
@@ -11,7 +12,7 @@ class UserController extends Controller
 
     public function book()
     {
-        return view('user.book');
+        return view('user.book')->with('data',Department::all());
     }
 
     public function storeBookData(Request $request)
@@ -23,7 +24,7 @@ class UserController extends Controller
             'name' => 'required',
             'age' => 'required',
             'address' => 'required',
-            'description' => 'required',
+            'department' => 'required',
             'phone' => 'required',
             'email' => 'required|email',
 
@@ -38,7 +39,7 @@ class UserController extends Controller
         $book->name = request('name');
         $book->age = request('age');
         $book->address = request('address');
-        $book->description = request('description');
+        $book->department = request('department');
         $book->phone = request('phone');
         $book->email = request('email');
 

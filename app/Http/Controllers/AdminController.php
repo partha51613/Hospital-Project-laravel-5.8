@@ -147,20 +147,22 @@ class AdminController extends Controller
     {
             $input = array(
                 'email' => request('email'),
-                'password' => request('password')
+                'password' => request('password'),
+                'remember' => request('remember')
 
             );
 
-            $remember = "test";
+            return $input;
+            // $remember = "test";
 
-            if (Auth::attempt($input, $remember))
-            {
-                return redirect(route('adminindex'))->with('success','Login Successful');
-            }
-            else
-            {
-                return  back()->with('deleted', 'Login Failed! Please try again');
-            }
+            // if (Auth::attempt($input, $remember))
+            // {
+            //     return redirect(route('adminindex'))->with('success','Login Successful');
+            // }
+            // else
+            // {
+            //     return  back()->with('deleted', 'Login Failed! Please try again');
+            // }
 
     }
 
